@@ -1,7 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
-
 import { Page, Title, SubTitle } from './styles'
 
 const App: React.FC = () => {
@@ -14,5 +13,6 @@ const App: React.FC = () => {
 		</Provider>
 	)
 }
+
 
 export default App
