@@ -15,16 +15,20 @@
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaFeatures": {
-			"jsx": true
+			"jsx": true,
+			"tsx": true
 		},
 		"ecmaVersion": 2018,
 		"sourceType": "module"
 	},
 	"plugins": ["react", "@typescript-eslint"],
 	"rules": {
-		"indent": ["error", "tab"],
-		"linebreak-style": ["error", "unix"],
-		"quotes": ["error", "single"],
-		"semi": ["error", "never"]
+		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"linebreak-style": ["warn", "unix"],
+		"quotes": ["warn", "single"],
+		"semi": ["warn", "never"],
+		"no-undef": "off",
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": "warn"
 	}
 }
