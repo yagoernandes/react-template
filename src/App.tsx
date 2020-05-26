@@ -1,18 +1,26 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
-import { Page, Title, SubTitle } from './styles'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
+import Home from './pages/Home'
+import SecondPage from './pages/SecondPage'
 
 const App: React.FC = () => {
 	return (
 		<Provider store={store}>
-			<Page>
-				<Title>Olá mundo!</Title>
-				<SubTitle>GERADO COM O TEMPLATE DO YAGO</SubTitle>
-			</Page>
+			<Router>
+				<Switch>
+					<Route path="/second">
+						<SecondPage />
+					</Route>
+					<Route path="/">
+						<Home />
+					</Route>
+				</Switch>
+			</Router>
 		</Provider>
 	)
 }
-
 
 export default App
